@@ -1,0 +1,253 @@
+.home{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.intro{
+    max-width: 540px;
+    text-align: center;
+}
+
+.home__img{
+    margin-bottom: 1.5rem;
+}
+
+.home__name{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 0.5rem;
+}
+.home__socials{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.75rem;
+    margin: 1.5rem 0;
+}
+
+.home__social-link{
+    color: var(--title-color);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+
+.scroll__down{
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    width: 100%;
+}
+
+.home__scroll-name{
+    font-size: var(--small-font-size);
+}
+
+.mouse{
+    border: 2px solid #454360;
+    display: block;
+    height: 1.6rem;
+    width: 1.25rem;
+    margin: auto;
+    margin-top: 0.75rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+@keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+    15% {
+        top: 50%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 29%;
+    }
+    
+    
+}
+
+.wheel{
+    background-color: var(--title-color);
+    border-radius: 100%;
+    width: 0.25rem;
+    height: 0.25rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ani-mouse 2s linear infinite;
+}
+
+.shapes{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  
+}
+
+.shape{
+    position: absolute;
+}
+
+.s1{
+    left: 2%;
+    top: 10%;
+}
+.s2{
+    left: 18%;
+    top: 30%;
+}
+.s3{
+    left: 5%;
+    bottom: 30%;
+}
+.s4{
+    left: 2%;
+    bottom: 30%;
+}
+.s5{
+    left: 44%;
+    top: 10%;
+}
+.s6{
+    left: 36%;
+    bottom: 10%;
+}
+.s7{
+    top: 20%;
+    right: 25%;
+}
+.s8{
+    bottom: 20%;
+    right: 24%;
+}
+.s9{
+    top: 10%;
+    right: 2%;
+}
+.s10{
+    top: 45%;
+    right: 11%;
+}
+.s11{
+    bottom: 10%;
+    right: 2%;
+}
+
+
+
+
+
+
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background: #454360;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background:	#a07976;
+    color: #fff;
+  }
+  
+
+
+  @media screen and (max-width:1024px) {
+    .home__social-link{
+      font-size: 1.125rem;
+    }
+    
+  }
