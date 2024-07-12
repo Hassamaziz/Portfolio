@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     subject: "",
     message: "",
   });
@@ -18,27 +19,31 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      e.target,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    )
-    .then((result) => {
-      console.log(result.text);
-      alert('Message sent successfully!');
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }, (error) => {
-      console.error(error.text);
-      alert('Failed to send message. Please try again later.');
-    });
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          setFormData({
+            user_name: "",
+            user_email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
   };
 
   return (
@@ -51,25 +56,25 @@ const Contact = () => {
             Don't Like Forms? Send Me An Email 👋
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="contact__form">
+        <form ref={form} onSubmit={sendEmail} className="contact__form">
           <div className="contact__form-group">
             <div className="contact__form-div">
               <input
                 type="text"
-                name="name"
+                name="user_name"
                 className="contact__form-input"
                 placeholder="Enter Your Name"
-                value={formData.name}
+                value={formData.user_name}
                 onChange={handleChange}
               />
             </div>
             <div className="contact__form-div">
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 className="contact__form-input"
                 placeholder="Enter Your Email"
-                value={formData.email}
+                value={formData.user_email}
                 onChange={handleChange}
               />
             </div>
