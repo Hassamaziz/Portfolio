@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import emailjs from "emailjs-com";
 import "./contact.css";
 
 const Contact = () => {
@@ -18,10 +18,16 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/send', formData);
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      e.target,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then((result) => {
+      console.log(result.text);
       alert('Message sent successfully!');
       setFormData({
         name: "",
@@ -29,9 +35,10 @@ const Contact = () => {
         subject: "",
         message: "",
       });
-    } catch (error) {
+    }, (error) => {
+      console.error(error.text);
       alert('Failed to send message. Please try again later.');
-    }
+    });
   };
 
   return (
