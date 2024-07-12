@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import "./contact.css";
 
 const Contact = () => {
@@ -31,7 +33,7 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!");
           setFormData({
             user_name: "",
             user_email: "",
@@ -41,13 +43,14 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          alert("Failed to send message. Please try again later.");
+          toast.error("Failed to send message. Please try again later.");
         }
       );
   };
 
   return (
     <section className="contact container section" id="contact">
+      <ToastContainer />
       <h2 className="section__title">Get In Touch</h2>
       <div className="contact__container grid">
         <div className="contact__info">

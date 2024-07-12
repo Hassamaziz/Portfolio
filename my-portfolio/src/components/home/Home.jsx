@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <section className="home container" id="home">
     <div className="intro">
-    <img src={Me} width={100} alt="" className="home__img" />
+    <img src={Me} width={150} alt="" className="home__img" />
     <h1 className="home__name">Hassam Aziz</h1>
     <span className="home__education">I'm a Front-End Developer</span>
 
