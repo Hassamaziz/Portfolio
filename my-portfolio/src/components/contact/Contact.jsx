@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,6 +13,13 @@ const Contact = () => {
     message: "",
   });
 
+  useEffect(() => {
+    console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log("Template ID:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+    console.log("Public Key:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+  }, []);
+  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -25,27 +32,29 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          toast.success("Message sent successfully!");
-          setFormData({
-            user_name: "",
-            user_email: "",
-            subject: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Failed to send message. Please try again later.");
-        }
-      );
+  .sendForm(
+    process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    form.current,
+    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+  )
+  .then(
+    (result) => {
+      console.log(result.text);
+      toast.success("Message sent successfully!");
+      setFormData({
+        user_name: "",
+        user_email: "",
+        subject: "",
+        message: "",
+      });
+    },
+    (error) => {
+      console.log("FAILED...", error.text);
+      toast.error("Failed to send message. Please try again later.");
+    }
+  );
+
   };
 
   return (
