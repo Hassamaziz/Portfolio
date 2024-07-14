@@ -50,7 +50,7 @@ const Contact = () => {
       });
     },
     (error) => {
-      console.log("FAILED...", error.text);
+      console.log("FAILED", error.text);
       toast.error("Failed to send message. Please try again later.");
     }
   );
