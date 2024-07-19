@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <section className="home container" id="home">
       <div className="intro">
-        <img src={Me} width={100} style={{borderRadius:'50%'}} alt="" className="home__img" />
+        <img src={Me} width={100} style={{borderRadius:'30% 70% 70% 30% / 30% 30% 70% 70%  '}} alt="" className="home__img" />
         <h1 className="home__name">Hassam Aziz</h1>
         <span className="home__education">
           I'm&nbsp;
