@@ -3,7 +3,7 @@ const Data = [
       id: 1,
       category: "education",
       icon: "icon-graduation",
-      year: "2021 - present",
+      year: "2021 - 2025",
       title: "Bachelors In Information Technology",
       desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.",
     },

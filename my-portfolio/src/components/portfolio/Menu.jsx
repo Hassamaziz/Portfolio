@@ -9,6 +9,8 @@ import Work8 from "../../assets/crud.PNG";
 import Work9 from "../../assets/microsoft.PNG";
 import Work10 from "../../assets/facebook.PNG";
 import Work11 from "../../assets/numtoword.PNG";
+import Work12 from "../../assets/MovieApp.PNG";
+import Work13 from "../../assets/Zentry.PNG";
 
 
 const Menu = [
@@ -97,6 +99,20 @@ const Menu = [
                 title: "Number To Words Conversion",
                 category: "Dynamic",
                 link:"https://github.com/Hassamaziz/SMIT-Batch-6-E-A/tree/main/Numbers%20to%20Words%20conversion"
+              },
+                {
+                id: 12,
+                image: Work12,
+                title: "Movie App",
+                category: "Dynamic",
+                link:"https://movie-app-lac-phi.vercel.app/"
+              },
+                 {
+                id: 13,
+                image: Work13,
+                title: "Zentry",
+                category: "Dynamic",
+                link:"https://award-winning-lac.vercel.app/"
               },
         
   ];
