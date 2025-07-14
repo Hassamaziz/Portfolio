@@ -10,21 +10,21 @@ const data = [
     image: Image2,
     title: "Front-End Development",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Crafting responsive, visually appealing user interfaces using HTML, CSS, JavaScript, and modern frameworks like React. Emphasizing performance, accessibility, and pixel-perfect design.",
   },
   {
     id: 2,
     image: Image3,
     title: "Back-End Development",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Developing secure and scalable server-side applications using Node.js, Express, and databases like MongoDB. Ensuring smooth API integration and efficient data handling.",
   },
   {
     id: 3,
     image: Image1,
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Designing intuitive and user-centered digital experiences. Creating wireframes, prototypes, and design systems using Figma and Adobe XD to enhance usability and user satisfaction.",
   },
 ];
 
