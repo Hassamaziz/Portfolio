@@ -27,7 +27,7 @@ const data = [
       "Designing intuitive and user-centered digital experiences. Creating wireframes, prototypes, and design systems using Figma and Adobe XD to enhance usability and user satisfaction.",
   },
 ];
-
+   
 const Services = () => {
   return (
    <section className="services container section" id='services'>
