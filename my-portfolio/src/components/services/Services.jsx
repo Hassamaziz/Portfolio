@@ -28,6 +28,7 @@ const data = [
   },
 ];
    
+
 const Services = () => {
   return (
    <section className="services container section" id='services'>
