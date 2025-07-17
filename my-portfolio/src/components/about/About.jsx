@@ -18,9 +18,8 @@ const About = () => {
               rich experience in website design and building and customization,
               also I am good at Mobile App Design.
             </p>
-            <a href="" className="btn">
-              Download CV
-            </a>
+            <a href="/Resume_Hassam.pdf" target="_blank" rel="noopener noreferrer" className="btn">View CV</a>
+
           </div>
           <div className="about__skills grid">
           {/*===== First Skill ===== */}
