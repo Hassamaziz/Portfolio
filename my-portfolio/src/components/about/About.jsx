@@ -19,7 +19,6 @@ const About = () => {
               also I am good at Mobile App Design.
             </p>
             <a href="/Resume_Hassam.pdf" target="_blank" rel="noopener noreferrer" className="btn">View CV</a>
-
           </div>
           <div className="about__skills grid">
           {/*===== First Skill ===== */}
