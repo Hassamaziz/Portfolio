@@ -14,14 +14,22 @@ const About = () => {
         <div className="about__data grid">
           <div className="about__info">
             <p className="about__description">
-              I am Hassam Aziz, Web Developer from Faisalabad, Pakistan. I have
-              rich experience in website design and building and customization,
-              also I am good at Mobile App Design.
+              I'm Hassam Aziz, a passionate Web Developer based in Faisalabad,
+              Pakistan, with hands-on experience in crafting dynamic websites
+              and tailored digital solutions. I specialize in modern web design,
+              front-end development, and custom website building.
             </p>
-            <a href="/Resume_Hassam.pdf" target="_blank" rel="noopener noreferrer" className="btn">View CV</a>
+            <a
+              href="/Resume_Hassam.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              View CV
+            </a>
           </div>
           <div className="about__skills grid">
-          {/*===== First Skill ===== */}
+            {/*===== First Skill ===== */}
             <div className="skills__data">
               <div className="skills__titles">
                 <h3 className="skills__name">Front-End Development</h3>
@@ -32,16 +40,16 @@ const About = () => {
               </div>
             </div>
 
-             {/*===== Second Skill ===== */}
-             <div className="skills__data">
-             <div className="skills__titles">
-               <h3 className="skills__name">Back-End Development</h3>
-               <span className="skills__number">70%</span>
-             </div>
-             <div className="skills__bar">
-               <span className="skills__percentage back__end"></span>
-             </div>
-           </div>
+            {/*===== Second Skill ===== */}
+            <div className="skills__data">
+              <div className="skills__titles">
+                <h3 className="skills__name">Back-End Development</h3>
+                <span className="skills__number">70%</span>
+              </div>
+              <div className="skills__bar">
+                <span className="skills__percentage back__end"></span>
+              </div>
+            </div>
 
             {/*===== Third Skill ===== */}
             <div className="skills__data">
@@ -53,12 +61,10 @@ const About = () => {
                 <span className="skills__percentage ui__design"></span>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
-      <AboutBox/>
+      <AboutBox />
     </section>
   );
 };
