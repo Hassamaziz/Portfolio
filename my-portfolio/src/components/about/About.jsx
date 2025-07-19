@@ -1,4 +1,3 @@
-import React from "react";
 import "./about.css";
 import ABOUT from "../../assets/Hassam2.png";
 import AboutBox from "./AboutBox";
