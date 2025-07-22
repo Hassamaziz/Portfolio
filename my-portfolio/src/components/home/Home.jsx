@@ -15,7 +15,7 @@ const Home = () => {
         <span className="home__education">
           I'm&nbsp;
           <Typed
-            strings={["a Front-End Developer", "a Programmer", "a Problem Solver", "an Overthinker"]}
+            strings={["a Mern Stack Developer", "a Programmer", "a Problem Solver", "an Overthinker"]}
             typeSpeed={40}
             backSpeed={50}
             loop
