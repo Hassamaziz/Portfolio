@@ -14,9 +14,9 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
-    console.log("Template ID:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-    console.log("Public Key:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    // console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    // console.log("Template ID:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+    // console.log("Public Key:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
   }, []);
   
 
