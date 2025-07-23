@@ -6,32 +6,32 @@ const AboutBox = () => {
       <div className="about__box">
         <i className="about__icon icon-fire"></i>
         <div>
-          <h3 className="about__title">25</h3>
-          <span className="about__subtitle">Projects Completed</span>
+          <h3 className="about__title">20+</h3>
+          <span className="about__subtitle">Projects Built</span>
         </div>
       </div>
 
       <div className="about__box">
-        <i className="about__icon icon-cup"></i>
+        <i className="about__icon icon-layers"></i>
         <div>
-          <h3 className="about__title">1027</h3>
-          <span className="about__subtitle">Cups Of Coffee</span>
+          <h3 className="about__title">1000+</h3>
+          <span className="about__subtitle">Hours Practicing & Building</span>
         </div>
       </div>
 
       <div className="about__box">
-        <i className="about__icon icon-people"></i>
+        <i className="about__icon icon-screen-smartphone"></i>
         <div>
-          <h3 className="about__title">25</h3>
-          <span className="about__subtitle">Satisfied Clients</span>
+          <h3 className="about__title">5+</h3>
+          <span className="about__subtitle">Tech Stacks Learned</span>
         </div>
       </div>
 
       <div className="about__box">
-        <i className="about__icon icon-badge"></i>
+        <i className="about__icon icon-bulb"></i>
         <div>
-          <h3 className="about__title">3</h3>
-          <span className="about__subtitle">Hackathons Completed</span>
+          <h3 className="about__title">Always</h3>
+          <span className="about__subtitle">Learning & Innovating</span>
         </div>
       </div>
     </div>
