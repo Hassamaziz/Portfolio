@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="about container section" id="about">
       <h2 className="section__title">About Me</h2>
-
+{/* About Me */}
       <div className="about__container grid">
         <img src={ABOUT} width={200} alt="" className="about__img" />
         <div className="about__data grid">
