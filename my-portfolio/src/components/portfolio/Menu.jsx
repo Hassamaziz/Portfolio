@@ -11,6 +11,7 @@ import Work10 from "../../assets/facebook.PNG";
 import Work11 from "../../assets/numtoword.PNG";
 import Work12 from "../../assets/MovieApp.PNG";
 import Work13 from "../../assets/Zentry.PNG";
+import Work14 from "../../assets/thinkboard.PNG";
 
 const Menu = [
   {
@@ -105,6 +106,13 @@ const Menu = [
     title: "Zentry",
     category: "Dynamic",
     link: "https://award-winning-lac.vercel.app/",
+  }, 
+  {
+    id: 14,
+    image: Work14,
+    title: "ThinkBoard",
+    category: "Dynamic",
+    link: "https://notes-app-1mue.onrender.com/",
   },
 ];
 
