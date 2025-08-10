@@ -18,7 +18,7 @@ const About = () => {
               front-end development, and custom website building.
             </p>
             <a
-              href="/HASSAM.pdf"
+              href="/Hassam_Aziz.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
